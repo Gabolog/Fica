@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #ff7a7a;
+        }
+
+        div {
+            background: #ff7a7a;
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .decor {
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 10px;
+            width: 60px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        a{
+            color:white;
+            text-decoration:none;  
+        }
+
+    </style>
+
+    <script>
+
+        function sim() {
+            alert("Te busco sexta a noite, esteja pronta");
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = gposicao(10, 90);
+            btn.style.left = gposicao(10, 90);
+            console.log(btn);
+        }
+
+        function gposicao(min, max) {
+            return (Math.random() * (max - min) + min) + '%';
+        }
+    </script>
+
+    <title>Decisão Importante</title>
+</head>
+
+<body>
+    <div class="conteudo">
+        <h1>Fica comigo?</h1>
+        <button class="decor" onclick="sim()"><a href="https://youtu.be/XWGKqBQh_wQ">Sim</a></button>
+        <button class="decor" id="btn" onclick="desvia(this)" onmouseover="desvia(this)">Não</button>
+    </div>
+</body>
+
+</html>
