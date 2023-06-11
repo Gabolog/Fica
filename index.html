@@ -37,15 +37,35 @@
             text-decoration:none;  
         }
 
-   
+    </style>
+
+    <script>
+
+        function sim() {
+            alert("Te busco sexta a noite, esteja pronta");
+        }
+
+        function desvia(btn) {
+            btn.style.position = 'absolute';
+            btn.style.bottom = gposicao(10, 90);
+            btn.style.left = gposicao(10, 90);
+            console.log(btn);
+        }
+
+        function gposicao(min, max) {
+            return (Math.random() * (max - min) + min) + '%';
+        }
+    </script>
+
     <title>Decisão Importante</title>
 </head>
 
 <body>
-    <div class="conteudo">
+     <div class="conteudo">
         <h1>Decisão importante!</h1>/br
         <a href="./index/index.html">Clique e responda com sabedoria!</a>
     </div>
 </body>
 
 </html>
+
